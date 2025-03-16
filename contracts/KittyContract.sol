@@ -10,9 +10,9 @@ contract KittyContract {
 
     // Constructor to pre-create 3 kitties with hardcoded DNA values
     constructor() public {
-        kitties.push(Kitty(1)); // Kitty 1
-        kitties.push(Kitty(2)); // Kitty 2
-        kitties.push(Kitty(3)); // Kitty 3
+        kitties.push(Kitty(1)); 
+        kitties.push(Kitty(2)); 
+        kitties.push(Kitty(3)); 
     }
 
     // Function to get kitty details by ID

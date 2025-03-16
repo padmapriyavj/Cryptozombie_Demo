@@ -58,12 +58,12 @@
             <button class="btn btn-custom w-100 my-2" id="createZombieButton">Create New Zombie</button>
             <button class="btn btn-custom w-100 my-2" id="levelUpButton">Level Up Zombie</button>
             <button class="btn btn-custom w-100 my-2" id="showKittyButton">Show Kitties</button>
-            <div class="form-group mt-3">
-                <input type="text" class="form-control mb-2" id="zombieName" placeholder="Enter zombie name">
-            </div>
         </div>
         <div class="col-md-8">
-            <div class="card p-3">
+            <div class="card p-3 mt-3">
+                <input type="text" class="form-control mb-2" id="zombieName" placeholder="Enter zombie name">
+            </div>
+            <div class="card p-3 mt-3">
                 <h3 class="text-center">My Zombie Collection</h3>
                 <div id="zombieList"></div>
             </div>
@@ -115,8 +115,8 @@
             // Set the KittyContract address in ZombieFeeding
             const kittyAddress = "0xE0b0a5Dbf6369Db597Df7Eb5f10E4F799B45E01C";
             
-            // This would be needed if we were setting the contract address dynamically
-            // await zombieFeeding.methods.setKittyContractAddress(kittyAddress).send({ from: userAccount });
+            
+            await zombieFeeding.methods.setKittyContractAddress(kittyAddress).send({ from: userAccount });
             
             // Setup event listeners for zombie transfers
             cryptoZombies.events.Transfer({ filter: { _to: userAccount } })
@@ -233,8 +233,8 @@
         txStatus.textContent = "Creating new zombie on the blockchain. This may take a while...";
         
         try {
-            const receipt = await cryptoZombies.methods.createRandomZombie(name)
-                .send({ from: userAccount });
+            const receipt = await cryptoZombies.methods.createRandomZombie(name);
+                //.send({ from: userAccount });
                 
             txStatus.textContent = `Successfully created ${name}!`;
             zombieNameInput.value = '';
@@ -347,6 +347,7 @@
     showZombiesButton.addEventListener('click', () => {
         txStatus.textContent = "Loading your zombies...";
         refreshZombies();
+        txStatus.textContent = "Loading your zombies...";
     });
 
     createZombieButton.addEventListener('click', () => {
