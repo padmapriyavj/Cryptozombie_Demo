@@ -1,33 +1,24 @@
 pragma solidity ^0.4.25;
 
 import "./zombiefactory.sol";
-
-contract KittyInterface {
-  function getKitty(uint256 _id) external view returns (
-    bool isGestating,
-    bool isReady,
-    uint256 cooldownIndex,
-    uint256 nextActionAt,
-    uint256 siringWithId,
-    uint256 birthTime,
-    uint256 matronId,
-    uint256 sireId,
-    uint256 generation,
-    uint256 genes
-  );
-}
+import "./kittyinterface.sol"; // Import the KittyInterface
 
 contract ZombieFeeding is ZombieFactory {
-
   KittyInterface kittyContract;
+
+  // constructor to set the Kitty contract address
+  // constructor(address _kittyContractAddress) public {
+  //   kittyContract = KittyInterface(_kittyContractAddress);
+  // }
+
+  // Setter function to update the Kitty contract address
+  function setKittyContractAddress(address _address) external onlyOwner {
+    kittyContract = KittyInterface(_address);
+  }
 
   modifier onlyOwnerOf(uint _zombieId) {
     require(msg.sender == zombieToOwner[_zombieId]);
     _;
-  }
-
-  function setKittyContractAddress(address _address) external onlyOwner {
-    kittyContract = KittyInterface(_address);
   }
 
   function _triggerCooldown(Zombie storage _zombie) internal {
@@ -35,7 +26,7 @@ contract ZombieFeeding is ZombieFactory {
   }
 
   function _isReady(Zombie storage _zombie) internal view returns (bool) {
-      return (_zombie.readyTime <= now);
+    return (_zombie.readyTime <= now);
   }
 
   function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) internal onlyOwnerOf(_zombieId) {
