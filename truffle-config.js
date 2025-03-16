@@ -22,6 +22,11 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require("@truffle/hdwallet-provider"); 
+require("dotenv").config(); 
+const privateKey = process.env.PRIVATE_KEY; 
+const infuraProjectId = process.env.INFURA_PROJECT_ID; 
+
 
 module.exports = {
   /**
@@ -44,8 +49,16 @@ module.exports = {
      development: {
       host: "127.0.0.1",     // Localhost (default: none)
      port: 7545,            // Standard Ethereum port (default: none)
-     network_id: "1337",       // Any network (default: none)
+     network_id: "5777",       // Any network (default: none)
      },
+     sepolia: {
+      provider: () => new HDWalletProvider(privateKey, `https://eth-sepolia.g.alchemy.com/v2/Ww023GR7fc8h91t0re1dkyoFb_KuYjiF`),
+      network_id: 11155111, // Sepolia's network ID
+      gas: 5500000,          
+      confirmations: 2,      
+      timeoutBlocks: 200,    
+      skipDryRun: true,      
+    },
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
