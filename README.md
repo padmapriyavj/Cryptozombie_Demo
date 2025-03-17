@@ -5,7 +5,7 @@ CryptoZombies DApp
 
 ## Meta Blocks
 
-## Authors: 
+### Authors: 
 ```
 Kiran Sukumar, kiransukumar@csu.fullerton.edu, 814198594
 Padmapriya Vijayaragava Rengaraj, padmavijay26@csu.fullerton.edu, 829070978
