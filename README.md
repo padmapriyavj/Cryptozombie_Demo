@@ -18,6 +18,7 @@ improvements have been made on top of that base.
 
 ## Improvements Made
 1. Built a Nicer Website
+   ```
    ● Enhanced UI/UX: 
         We overhauled the website design to ensure it is more visually appealing and 
         user-friendly. This includes a modern layout, improved navigation, and better 
@@ -25,22 +26,28 @@ improvements have been made on top of that base.
    ● Responsive Design: 
         The website now adjusts seamlessly to different screen sizes and orientations, ensuring 
         a consistent user experience on desktops, tablets, and mobile devices.
-2. Added Images to Demo Zombies 
+   ```
+2. Added Images to Demo Zombies
+   ```
     ● Zombie Image Display: 
         When a zombie is created, its details are now accompanied by a corresponding image. 
         This visual representation helps users better understand and engage with the character. 
     ● Dynamic Image Generation: 
         During zombie level-up events, a random zombie image is generated. This adds an 
         element of surprise and variety, making the experience more fun and dynamic.
+   ```
 3. Deployed to Sepolia Testnet 
-    ● Test Network Deployment: 
+   ```
+   ● Test Network Deployment: 
         The smart contract has been successfully deployed on the Sepolia testnet. This allows 
         users and developers to interact with the DApp in a live testing environment before any 
         mainnet deployment. 
     ● Improved Accessibility: 
         By deploying on Sepolia, we ensured broader accessibility and provided a more robust 
-        testing ground for smart contract interactions. 
+        testing ground for smart contract interactions.
+   ```
 4. Additional Features 
+   ```
     ● Automatic Refresh: 
         The DApp interface automatically updates in real time without requiring manual 
         refreshes. This ensures that users see the latest changes and events as they occur. 
@@ -50,5 +57,7 @@ improvements have been made on top of that base.
         interface. 
     ● Dynamic Code Implementation: 
         We refactored and optimized both the smart contract and the frontend code. The 
-        dynamic code implementation impro
+        dynamic code implementation improves performance, reduces load times, and makes 
+        future updates more manageable.
+   ```
 
