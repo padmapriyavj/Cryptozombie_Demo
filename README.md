@@ -12,12 +12,12 @@ Padmapriya Vijayaragava Rengaraj, padmavijay26@csu.fullerton.edu, 829070978
 ```
 ## Project Information
 
-## Starter Code Usage
+### Starter Code Usage
 This project was built using the provided starter code as a foundation. All enhancements and 
 improvements have been made on top of that base. 
 
-## Improvements Made
-1. Built a Nicer Website
+### Improvements Made
+#### 1. Built a Nicer Website
    ```
    ● Enhanced UI/UX: 
         We overhauled the website design to ensure it is more visually appealing and 
@@ -27,7 +27,7 @@ improvements have been made on top of that base.
         The website now adjusts seamlessly to different screen sizes and orientations, ensuring 
         a consistent user experience on desktops, tablets, and mobile devices.
    ```
-2. Added Images to Demo Zombies
+#### 2. Added Images to Demo Zombies
    ```
     ● Zombie Image Display: 
         When a zombie is created, its details are now accompanied by a corresponding image. 
@@ -36,7 +36,7 @@ improvements have been made on top of that base.
         During zombie level-up events, a random zombie image is generated. This adds an 
         element of surprise and variety, making the experience more fun and dynamic.
    ```
-3. Deployed to Sepolia Testnet 
+#### 3. Deployed to Sepolia Testnet 
    ```
    ● Test Network Deployment: 
         The smart contract has been successfully deployed on the Sepolia testnet. This allows 
@@ -46,7 +46,7 @@ improvements have been made on top of that base.
         By deploying on Sepolia, we ensured broader accessibility and provided a more robust 
         testing ground for smart contract interactions.
    ```
-4. Additional Features 
+#### 4. Additional Features 
    ```
     ● Automatic Refresh: 
         The DApp interface automatically updates in real time without requiring manual 
